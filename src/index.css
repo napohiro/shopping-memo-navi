@@ -22,6 +22,9 @@ body {
   background: #f3f4f6;
   color: #111827;
   overscroll-behavior: none;
+  /* 横スクロールを完全に防ぐ */
+  overflow-x: hidden;
+  width: 100%;
 }
 
 #root {
