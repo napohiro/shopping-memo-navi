@@ -11,13 +11,15 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+  /* iOSのデフォルトフォントスケーリングを防ぐ */
+  -webkit-text-size-adjust: 100%;
 }
 
 html,
 body {
   margin: 0;
   padding: 0;
-  background: #f9fafb;
+  background: #f3f4f6;
   color: #111827;
   overscroll-behavior: none;
 }
@@ -26,21 +28,36 @@ body {
   max-width: 480px;
   margin: 0 auto;
   min-height: 100svh;
-  background: #f9fafb;
+  background: #f3f4f6;
   position: relative;
 }
 
 button {
   font-family: inherit;
+  /* タップ遅延をなくす */
+  touch-action: manipulation;
 }
 
 input,
 textarea,
 select {
   font-family: inherit;
+  touch-action: manipulation;
 }
 
 img {
   max-width: 100%;
   height: auto;
+}
+
+/* スクロールバーを細く（Webkit） */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: 2px;
 }
