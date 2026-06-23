@@ -1,6 +1,7 @@
 import './SettingsPage.css';
 
 const APP_VERSION = '1.0.0';
+const APP_RELEASE_DATE = '2026/06/23';
 
 export default function SettingsPage({ items, frequentItems }) {
   const totalItems = items.length;
@@ -115,6 +116,10 @@ export default function SettingsPage({ items, frequentItems }) {
               <div className="version-info__row">
                 <span className="version-info__label">バージョン</span>
                 <span className="version-info__value">v{APP_VERSION}</span>
+              </div>
+              <div className="version-info__row">
+                <span className="version-info__label">リリース日</span>
+                <span className="version-info__value">{APP_RELEASE_DATE}</span>
               </div>
               <div className="version-info__row">
                 <span className="version-info__label">対応環境</span>
