@@ -1,0 +1,86 @@
+.page {
+  min-height: 100vh;
+  background: #f9fafb;
+  padding-bottom: calc(72px + env(safe-area-inset-bottom));
+}
+
+.page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 16px 8px;
+  background: #fff;
+  border-bottom: 1px solid #f3f4f6;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.page-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #111827;
+  margin: 0;
+}
+
+.page-count {
+  font-size: 13px;
+  font-weight: 600;
+  color: #6b7280;
+  background: #f3f4f6;
+  padding: 3px 10px;
+  border-radius: 20px;
+}
+
+.purchased-toolbar {
+  padding: 10px 16px;
+  display: flex;
+  justify-content: flex-end;
+  background: #fff;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.btn-text-danger {
+  background: none;
+  border: none;
+  color: #dc2626;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 4px 8px;
+}
+
+.btn-text {
+  background: none;
+  border: none;
+  color: #6b7280;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 4px 8px;
+}
+
+.confirm-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.confirm-bar__text {
+  font-size: 13px;
+  color: #374151;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.empty-state__icon {
+  font-size: 56px;
+  margin: 0 0 12px;
+}
+
+.empty-state__text {
+  font-size: 15px;
+  color: #9ca3af;
+}

@@ -1,0 +1,306 @@
+.item-form-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  z-index: 200;
+  display: flex;
+  align-items: flex-end;
+  animation: fadeIn 0.15s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.item-form {
+  width: 100%;
+  max-height: 92vh;
+  background: #fff;
+  border-radius: 20px 20px 0 0;
+  display: flex;
+  flex-direction: column;
+  animation: slideUp 0.2s ease;
+}
+
+@keyframes slideUp {
+  from { transform: translateY(40px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.item-form__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px 12px;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.item-form__title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #111827;
+  margin: 0;
+}
+
+.item-form__close {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: none;
+  background: #f3f4f6;
+  color: #6b7280;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.item-form__body {
+  padding: 16px 20px;
+  overflow-y: auto;
+  flex: 1;
+  padding-bottom: calc(20px + env(safe-area-inset-bottom));
+}
+
+.form-label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 6px;
+  margin-top: 16px;
+}
+
+.form-label:first-child {
+  margin-top: 0;
+}
+
+.form-required {
+  color: #ef4444;
+  margin-left: 4px;
+  font-weight: 400;
+}
+
+.form-input {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 10px;
+  font-size: 16px;
+  color: #111827;
+  background: #fafafa;
+  box-sizing: border-box;
+  outline: none;
+  transition: border-color 0.15s;
+  font-family: inherit;
+}
+
+.form-input:focus {
+  border-color: #16a34a;
+  background: #fff;
+}
+
+.form-input--textarea {
+  resize: none;
+  line-height: 1.5;
+}
+
+/* 価格・店舗の横並びレイアウト */
+.form-row {
+  display: flex;
+  gap: 10px;
+}
+
+.form-col {
+  flex: 1;
+  min-width: 0;
+}
+
+.form-input-prefix {
+  display: flex;
+  align-items: center;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 10px;
+  background: #fafafa;
+  overflow: hidden;
+  transition: border-color 0.15s;
+}
+
+.form-input-prefix:focus-within {
+  border-color: #16a34a;
+  background: #fff;
+}
+
+.form-prefix {
+  padding: 0 8px 0 12px;
+  font-size: 15px;
+  color: #6b7280;
+  font-weight: 600;
+}
+
+.form-input--inline {
+  flex: 1;
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  padding: 12px 12px 12px 0;
+  min-width: 0;
+}
+
+.form-input--inline:focus {
+  border-color: transparent;
+  background: transparent;
+}
+
+/* 写真ボタン */
+.photo-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.photo-btn {
+  flex: 1;
+  padding: 12px 8px;
+  border-radius: 10px;
+  border: 1.5px dashed #d1d5db;
+  background: #fafafa;
+  font-size: 14px;
+  color: #374151;
+  cursor: pointer;
+  text-align: center;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.photo-btn:active {
+  background: #f3f4f6;
+}
+
+.photo-preview {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  max-height: 200px;
+}
+
+.photo-preview img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.photo-preview__clear {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: rgba(0,0,0,0.5);
+  color: #fff;
+  border: none;
+  font-size: 13px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 100均トグル */
+.hyakunen-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 16px;
+  padding: 14px 14px;
+  border-radius: 12px;
+  border: 1.5px solid #e5e7eb;
+  background: #fafafa;
+  cursor: pointer;
+  transition: all 0.15s;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+}
+
+.hyakunen-toggle--on {
+  border-color: #f59e0b;
+  background: #fffbeb;
+}
+
+.hyakunen-toggle__left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.hyakunen-toggle__icon {
+  font-size: 24px;
+}
+
+.hyakunen-toggle__title {
+  font-size: 15px;
+  font-weight: 700;
+  color: #111827;
+  margin: 0;
+}
+
+.hyakunen-toggle__sub {
+  font-size: 11px;
+  color: #9ca3af;
+  margin: 1px 0 0;
+}
+
+.hyakunen-toggle__switch {
+  width: 44px;
+  height: 26px;
+  border-radius: 13px;
+  background: #d1d5db;
+  position: relative;
+  transition: background 0.2s;
+  flex-shrink: 0;
+}
+
+.hyakunen-toggle__switch--on {
+  background: #f59e0b;
+}
+
+.hyakunen-toggle__knob {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+  transition: transform 0.2s;
+}
+
+.hyakunen-toggle__switch--on .hyakunen-toggle__knob {
+  transform: translateX(18px);
+}
+
+/* 保存ボタン */
+.form-submit {
+  width: 100%;
+  margin-top: 20px;
+  padding: 16px;
+  background: #16a34a;
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  font-size: 17px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.form-submit:hover {
+  background: #15803d;
+}
+
+.form-submit:disabled {
+  background: #d1d5db;
+  cursor: not-allowed;
+}
